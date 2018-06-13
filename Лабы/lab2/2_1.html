@@ -1,0 +1,41 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Перепишите функцию, используя оператор '?' или '||'</h1>
+			Следующая функция возвращает true, если параметр age больше 18. В ином случае она задаёт вопрос confirm и возвращает его результат.
+			<listing>
+function checkAge(age) {
+	if (age > 18) {
+		return true;
+	} else {
+		return confirm('Родители разрешили?');
+	}
+}
+			</listing>
+			Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку. Сделайте два варианта функции checkAge:
+			<p>Используя оператор '?'
+			<p>Используя оператор ||
+		<h1>Листинг</h1>
+			<h3>Используя оператор '?'</h3>
+			<listing>
+function checkAge1(age)
+{
+	age = parseInt(document.getElementById("chk_age").value);
+	return (age > 18) ? true : confirm('Родители разрешили?');
+}
+			</listing>
+			<h3>Используя оператор ||</h3>	
+			<listing>
+function checkAge2()
+{
+	age = parseInt(document.getElementById("chk_age").value);
+	return (age > 18) || confirm('Родители разрешили?');
+}			
+			</listing>
+		<h1>Результат</h1>
+			Введите возраст:<input type="text" id="chk_age"><input type="button" value="ОК" onclick="checkAge2()">
+	</div>
+</body>

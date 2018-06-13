@@ -1,0 +1,26 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Проверка стандарта</h1>
+			Используя конструкцию if..else, напишите код, который будет спрашивать: «Каково «официальное» название JavaScript?».
+			<p>Если посетитель вводит «ECMAScript», то выводить «Верно!», если что-то другое – выводить «Не знаете? «ECMAScript»!».
+		<h1>Листинг</h1>
+			<listing>
+function jsname()
+{
+	val = document.getElementById("jsname_txt").value.toLowerCase();
+	if ( val == "ecmascript") {
+		alert('Верно');
+	} else {
+		alert('Не знаете? "ECMAScript"');
+	}
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="text" id="jsname_txt" placeholder='ECMAScript'/>
+			<input type="button" value="Проверить" onclick='jsname()'/>
+	</div>
+</body>

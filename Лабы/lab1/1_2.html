@@ -1,0 +1,21 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Вывести alert внешним скриптом</h1>
+			Возьмите решение предыдущей задачи
+			<p>Выведите alert и вынесите скрипт во внешний файл alert.js, который расположите в той же директории.
+			<p>Откройте страницу и проверьте, что вывод сообщения всё ещё работает.
+		<h1>Листинг</h1>
+			<listing>
+function js_from_file()
+{
+	alert('Я - JavaScript из файла!');
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Выполнить функцию" onclick="js_from_file()"/>
+	</div>
+</body>

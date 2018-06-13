@@ -1,0 +1,40 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Числа Фибоначчи</h1>
+			Последовательность чисел Фибоначчи имеет формулу Fn = Fn-1 + Fn-2. То есть, следующее число получается как сумма двух предыдущих.
+			<br>Первые два числа равны 1, затем 2(1+1), затем 3(1+2), 5(2+3) и так далее: 1, 1, 2, 3, 5, 8, 13, 21....
+			<p>Числа Фибоначчи тесно связаны с золотым сечением и множеством природных явлений вокруг нас.
+			<p>Напишите функцию fib(n), которая возвращает n-е число Фибоначчи. Пример работы:
+			<listing>
+function fib(n) { /* ваш код */ }
+
+alert( fib(3) ); // 2
+alert( fib(7) ); // 13
+alert( fib(77)); // 5527939700884757
+			</listing>
+			Все запуски функций из примера выше должны срабатывать быстро.
+		<h1>Листинг</h1>
+			<listing>
+function Fib()
+{
+	var n = parseInt(document.getElementById("value_n5").value);
+	var prev = 1;
+	var next = 1;
+	var res = prev + next;
+	for (var i=3;i<=n;i++){
+		res = prev + next;
+		prev = next;
+		next = res;
+	}
+	alert(res);
+}
+			</listing>
+		<h1>Результат</h1>
+			Числа Фибоначчи fib(n):<input type="text" id="value_n5" style="width: 50px;">
+			<input type="button" value="Высчитать" onclick="Fib()">
+	</div>
+</body>

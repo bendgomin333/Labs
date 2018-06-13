@@ -1,0 +1,31 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Перепишите 'if' в '?'</h1>
+			Перепишите if с использованием оператора '?':
+			<listing>
+if (a + b < 4) {
+	result = 'Мало';
+	} else {
+	result = 'Много';
+}
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function ab_num()
+{
+	var a = document.getElementById("a_num").value;
+	var b = document.getElementById("b_num").value;
+	var result = (parseInt(a) + parseInt(b)) < 4 ? 'Мало' : 'Много';
+	alert(result);
+}
+			</listing>
+		<h1>Результат</h1>
+			a: <input type="text" id="a_num" style="width: 50px;"/> 
+			b: <input type="text" id="b_num" style="width: 50px;"/>
+			<input type="button" value="Посчитать" onclick="ab_num()"/>
+	</div>
+</body>

@@ -1,0 +1,28 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Замените for на while</h1>
+			Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+			<listing>
+for (var i = 0; i < 3; i++) {
+	alert( "номер " + i + "!" );
+}
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function ForWhile()
+{
+	var i = 0;
+	while (i<3){
+		i++;
+		alert('Номер'+i+'!');
+	}
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Вывести результат" onclick="ForWhile()"/>
+	</div>
+</body>

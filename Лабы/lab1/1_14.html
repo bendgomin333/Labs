@@ -1,0 +1,42 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Вывести простые числа</h1>
+			Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.
+			<p>Другими словами, n>1 – простое, если при делении на любое число от 2 до n-1 есть остаток.
+			<p>Создайте код, который выводит все простые числа из интервала от 2 до 10.
+			<p>Результат должен быть: 2,3,5,7.
+			<p>P.S. Код также должен легко модифицироваться для любых других интервалов.
+		<h1>Листинг</h1>
+			<listing>
+function SimpleNums()
+{
+	var i = 2;
+	var res = '';
+	var ost;
+	var k;
+	var n = parseInt(document.getElementById('CountSN').value);
+	cicle:
+		for (i;i<=n;i++){
+			for (k=2;k#lti;k++){
+				if (i % k == 0){ 
+					continue cicle;
+				}
+			}
+			if (i == 2) {
+				res = 2;
+			} else {
+				res = res + ', ' + i;
+			}
+		}
+	alert(res);
+}
+			</listing>
+		<h1>Результат</h1>
+			Введите число: <input type="text" id='CountSN' placeholder='Число'/>
+			<input type="button" value="Начать" onclick="SimpleNums()"/>
+	</div>
+</body>

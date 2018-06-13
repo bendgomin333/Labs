@@ -1,0 +1,66 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Вычислить сумму чисел до данного</h1>
+			Напишите функцию sumTo(n), которая для данного n вычисляет сумму чисел от 1 до n, например:
+			<listing>
+sumTo(1) = 1
+sumTo(2) = 2 + 1 = 3
+sumTo(3) = 3 + 2 + 1 = 6
+sumTo(4) = 4 + 3 + 2 + 1 = 10
+...
+sumTo(100) = 100 + 99 + ... + 2 + 1 = 505
+			</listing>
+			Сделайте три варианта решения:
+			<br>1. С использованием цикла.
+			<br>2. Через рекурсию, т.к. sumTo(n) = n + sumTo(n-1) для n > 1.
+			<br>3. С использованием формулы для суммы арифметической прогрессии.
+			<p>Пример работы вашей функции:
+			<listing>
+function sumTo(n) { /*... ваш код ... */ }
+
+alert( sumTo(100) ); // 5050
+			</listing>
+			Какой вариант решения самый быстрый? Самый медленный? Почему?
+			<br>Можно ли при помощи рекурсии посчитать sumTo(100000)? Если нет, то почему?
+		<h1>Листинг</h1>
+			<h3>1. С использованием цикла</h3>
+			<listing>
+function SumTo1()
+{
+	var n = parseInt(document.getElementById("value_n1").value);
+	var res = 0;
+	for (var i=1;i<=n;i++){
+		res = res+i;
+	}
+	alert('SumTo(n) = '+res);
+}
+			</listing>
+			<h3>2. Через рекурсию</h3>
+			<listing>
+function SumTo2(n)
+{	
+	if (n == 1) return 1;
+	return n + SumTo2(n-1);
+}
+			</listing>
+			<h3>3. С использованием формулы для суммы арифметической прогрессии</h3>
+			<listing>
+function SumTo3(n)
+{
+	var res = 0;
+	var n = parseInt(document.getElementById("value_n3").value);
+	res = ((1 + n)/2)*n;
+	alert('SumTo(n) = '+res);
+}
+			</listing>
+		<h1>Результат</h1>
+			SumTo(n):
+			<br><input type="text" id="value_n1" style="width:50px;"><input type="button" value="ОК" onclick="SumTo1()">Цикл
+			<br><input type="text" id="value_n2" style="width:50px;"><input type="button" value="ОК" onclick="alert('SumTo(n) = '+SumTo2(parseInt(document.getElementById('value_n2').value)))">Рекурсия
+			<br><input type="text" id="value_n3" style="width:50px;"><input type="button" value="ОК" onclick="SumTo3()">Формула
+	</div>
+</body>

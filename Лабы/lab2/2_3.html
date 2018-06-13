@@ -1,0 +1,38 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Функция pow(x,n)</h1>
+			Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+			<listing>
+pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...*1 =
+			</listing>
+			Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
+			<p>P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
+		<h1>Листинг</h1>
+			<listing>
+function pow1()
+{
+	var x = parseInt(document.getElementById("value_x").value);
+	var n = parseInt(document.getElementById("value_n").value);
+	var res = x;
+	var i = 1;
+	while (i&ltn){
+		res = res*x;
+		i++;
+	}
+	if (n==0) res=1;
+	alert('pow(x,n) = '+res);
+}
+			</listing>
+		<h1>Результат</h1>
+			pow(x,n):
+			<input type="text" id="value_x" style="width:50px;">
+			<input type="text" id="value_n" style="width:50px;">
+			<input type="button" value="ОК" onclick="pow1()">
+	</div>
+</body>

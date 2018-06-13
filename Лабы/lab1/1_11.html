@@ -1,0 +1,40 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Проверка if вне диапазона</h1>
+			Напишите условие if для проверки того факта, что age НЕ находится между 14 и 90 включительно.
+			<p>Сделайте два варианта условия: первый с использованием оператора НЕ !, второй – без этого оператора.
+		<h1>Листинг</h1>
+		<h3>Вариант 1:</h3>
+			<listing>
+function AgeCheck1()
+{
+	var age = parseInt(document.getElementById('Age1').value);
+	if (age < 14 || age > 90) {
+		alert('Да');
+	} else {
+		alert('Нет');
+	}
+}
+			</listing>
+		<h3>Вариант 2:</h3>
+		<listing>
+function AgeCheck2()
+{
+	var age = parseInt(document.getElementById('Age1').value);
+	if (!(age >= 14 && age <= 90)) {
+		alert('Да');
+	} else {
+		alert('Нет');
+	}
+}
+	</listing>
+		<h1>Результат</h1>
+			Age: <input type="text" placeholder="Возраст" id="Age1"/> 
+			<input type="button" value="Проверка1" onclick="AgeCheck1()"/>
+			<input type="button" value="Проверка2" onclick="AgeCheck1()"/>
+	</div>
+</body>

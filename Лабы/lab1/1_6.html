@@ -1,0 +1,31 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Получить знак числа</h1>
+			Используя конструкцию if..else, напишите код, который получает значение prompt, а затем выводит alert:
+			<br>1, если значение больше нуля,
+			<br>-1, если значение меньше нуля,
+			<br>0, если значение равно нулю.
+		<h1>Листинг</h1>
+			<listing>
+function check_number()
+{	
+	var c_number=prompt('Введите число');
+	if (c_number > 0) {
+		alert('1 (Число больше нуля)');
+	} else if (c_number < 0) {
+		alert('-1 (Число меньше нуля)');
+	} else if (c_number = 0) {
+		alert('0 (Число равно нулю)');
+	} else {
+		alert('Это не число, попробуйте еще раз');
+	}
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Получить знак" onclick='check_number()'/>
+	</div>
+</body>

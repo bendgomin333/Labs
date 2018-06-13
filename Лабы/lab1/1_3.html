@@ -1,0 +1,25 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Работа с переменными</h1>
+			Объявите две переменные: admin и name.
+			<br>Запишите в name строку "Василий".
+			<br>Скопируйте значение из name в admin.
+			<br>Выведите admin (должно вывести «Василий»).
+		<h1>Листинг</h1>
+			<listing>
+function admin_name()
+{
+	var name;
+	name = 'Василий';
+	admin = name;
+	alert(admin);
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Вывеси имя admin" onclick='admin_name()'/>
+	</div>
+</body>

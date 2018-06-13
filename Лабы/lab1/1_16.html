@@ -1,0 +1,46 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Переписать if'ы в switch</h1>
+			Перепишите код с использованием одной конструкции switch:
+			<listing>
+var a = +prompt('a?', '');
+
+if (a == 0) {
+	alert( 0 );
+}
+
+if (a == 1) {
+	alert( 1 );
+}
+
+if (a == 2 || a == 3) {
+	alert( '2,3' );
+}
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function Switch()
+{
+	var a = +prompt('a?','');
+	switch (a) {
+		case 0:
+			alert(0);
+			break;
+		case 1:
+			alert(1);
+			break;
+		case 2:
+		case 3:
+			alert('2,3');
+			break;
+	}
+}
+			</listing>
+		<h1>Результат</h1>
+			Введите значение (0,1,2,3)<input type="button" value="Ввод" onclick="Switch()"/>
+	</div>
+</body>

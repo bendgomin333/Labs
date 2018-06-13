@@ -1,0 +1,41 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Вычислить факториал</h1>
+			Факториа́л числа – это число, умноженное на «себя минус один», затем на «себя минус два» и так далее, до единицы. Обозначается n!
+			<br>Определение факториала можно записать как:
+			<listing>
+n! = n * (n - 1) * (n - 2) * ...*
+			</listing>
+			Примеры значений для разных n:
+			<listing>
+1! = 1
+2! = 2 * 1 = 2
+3! = 3 * 2 * 1 = 6
+4! = 4 * 3 * 2 * 1 = 24
+5! = 5 * 4 * 3 * 2 * 1 = 12			
+			</listing>
+			Задача – написать функцию factorial(n), которая возвращает факториал числа n!, используя рекурсивный вызов.
+			<listing>
+alert( factorial(5) ); // 120
+			</listing>
+			Подсказка: обратите внимание, что n! можно записать как n * (n-1)!. Например: 
+			<listing>
+3! = 3*2! = 3*2*1! = 6
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function factorial(n)
+{
+	if (n == 1) return 1;
+	return n * factorial(n-1);
+}
+			</listing>
+		<h1>Результат</h1>
+			factorial(n):<input type="text" id="value_n4" placeholder='n'/>
+			<input type="button" value="Посчитать" onclick="alert('factorial(n) = '+factorial(parseInt(document.getElementById('value_n4').value)))"
+	</div>
+</body>

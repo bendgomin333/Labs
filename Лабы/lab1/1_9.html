@@ -1,0 +1,38 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Перепишите 'if..else' в '?</h1>
+			Перепишите if..else с использованием нескольких операторов '?'.
+			<br>Для читаемости – оформляйте код в несколько строк.
+			<listing>
+var message;
+
+if (login == 'Вася') {
+	message = 'Привет';
+} else if (login == 'Директор') {
+	message = 'Здравствуйте';
+} else if (login == '') {
+	message = 'Нет логина';
+} else {
+	message = '';
+}
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function IfElse()
+{
+	var login = document.getElementById('IfElse').value;
+	var result = (login) == 'Вася' ? 'Привет' :
+	login == 'Директор' ? 'Здравствуйте' :
+	login == '' ? 'Нет логина' : '';
+	alert(result);
+}
+			</listing>
+		<h1>Результат</h1>
+			login: <input type="text" placeholder="Логин" id="IfElse"/> 
+			<input type="button" value="Вход" onclick="IfElse()()"/>
+	</div>
+</body>

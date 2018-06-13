@@ -1,0 +1,22 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Объявление переменных</h1>
+			Создайте переменную для названия нашей планеты и присвойте ей значение "Земля". Правильное имя выберите сами.
+			<p>Создайте переменную для имени посетителя со значением "Петя". Имя также на ваш вкус.
+		<h1>Листинг</h1>
+			<listing>
+function eu_vars()
+{
+	earth = 'Земля';
+	user = 'Петя';
+	alert('Объявленные переменные: '+earth+' + '+user)
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Вывести переменные" onclick='eu_vars()'/>
+	</div>
+</body>

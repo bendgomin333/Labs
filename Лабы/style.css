@@ -1,0 +1,19 @@
+#content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 90%;
+	margin-left: 5%;
+}
+#lab1 {
+	width: 33.33%;
+	float: left;
+}
+#lab2 {
+	width: 33.33%;
+	float: left;
+}
+#lab3 {
+	width: 33.33%;
+	float: left;
+}

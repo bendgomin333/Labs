@@ -1,0 +1,41 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="3lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Создайте калькулятор</h1>
+			Создайте объект calculator с тремя методами:
+			<p>- read() запрашивает prompt два значения и сохраняет их как свойства объекта
+			<br>- sum() возвращает сумму этих двух значений
+			<br>- mul() возвращает произведение этих двух значений
+			<listing>
+var calculator = {
+...ваш код...
+}
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function Fib()
+{
+	var n = parseInt(document.getElementById("value_n5").value);
+	var prev = 1;
+	var next = 1;
+	var res = prev + next;
+	for (var i=3;i<=n;i++){
+		res = prev + next;
+		prev = next;
+		next = res;
+	}
+	alert(res);
+}
+			</listing>
+		<h1>Результат</h1>
+			Числа Фибоначчи fib(n):<input type="text" id="value_n5" style="width: 50px;">
+			<input type="button" value="Высчитать" onclick="Fib()">
+	</div>
+</body>

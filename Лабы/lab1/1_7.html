@@ -1,0 +1,35 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="alert.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Проверка логина</h1>
+			Напишите код, который будет спрашивать логин (prompt).
+			<p>Если посетитель вводит «Админ», то спрашивать пароль, если нажал отмена (escape) – выводить «Вход отменён», если вводит что-то другое – «Я вас не знаю».
+			<p>Пароль проверять так. Если введён пароль «Чёрный Властелин», то выводить «Добро пожаловать!», иначе – «Пароль неверен», при отмене – «Вход отменён».
+		<h1>Листинг</h1>
+			<listing>
+function check_login()
+{
+	var login=prompt("Введите логин", 'Админ');
+	if (login == 'Админ') {
+		var password=prompt("Введите пароль", 'Черный Властелин');
+		if (password == 'Черный Властелин') {
+			alert('Добро пожаловать');
+		} else if (password == null) {
+			alert('Отмена входа');
+		} else {
+			alert('Пароль неверен');
+		}
+	} else if (login == null) {
+		alert('Отмена входа');
+	} else {
+		alert ('Я вас не знаю');
+	}
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="Проверить логин" onclick='check_login()'/>
+	</div>
+</body>

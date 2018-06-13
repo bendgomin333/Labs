@@ -1,0 +1,35 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="2lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Функция min</h1>
+			Задача «Hello World» для функций :)
+			<br>Напишите функцию min(a,b), которая возвращает меньшее из чисел a,b.
+			<br>Пример вызовов:
+			<listing>
+min(2, 5) == 2
+min(3, -1) == -1
+min(1, 1) == 1
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function min1()
+{
+	var a = parseInt(document.getElementById("value_a").value);
+	var b = parseInt(document.getElementById("value_b").value);
+	var min = a;
+	if (a>b) {
+		min = b;
+	}
+	alert('min('+a+', '+b+') == '+min);
+}
+			</listing>
+		<h1>Результат</h1>
+			min(a,b):
+			<input type="text" id="value_a" style="width:50px;">
+			<input type="text" id="value_b" style="width:50px;">
+			<input type="button" value="ОК" onclick="min1()">
+	</div>
+</body>
