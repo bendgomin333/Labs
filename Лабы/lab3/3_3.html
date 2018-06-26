@@ -1,0 +1,40 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="3lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Цепочка вызовов</h1>
+			Напишите функцию sum, которая будет работать так:
+			<listing>
+sum(1)(2) == 3; // 1 + 2
+sum(1)(2)(3) == 6; // 1 + 2 + 3
+sum(5)(-1)(2) == 6
+sum(6)(-1)(-2)(-3) == 0
+sum(0)(1)(2)(3)(4)(5) == 1
+			</listing>
+			Количество скобок может быть любым.
+		<h1>Листинг</h1>
+			<listing>
+var ladder = {
+	step: 0,
+	up: function() {
+		this.step++;
+		return this;
+	},
+	down: function() {
+		this.step--;
+		return this;
+	},
+	showStep: function() {
+		alert( this.step );
+	}
+};
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="sum(1)(2)" onclick="alert(sum(1)(2))">
+			<input type="button" value="sum(5)(-1)(2)" onclick="alert(sum(5)(-1)(2))">
+			<input type="button" value="sum(6)(-1)(-2)(-3)" onclick="alert(sum(6)(-1)(-2)(-3))">
+			<input type="button" value="sum(0)(1)(2)(3)(4)(5)" onclick="alert(sum(0)(1)(2)(3)(4)(5))">
+	</div>
+</body>

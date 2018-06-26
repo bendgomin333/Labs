@@ -1,0 +1,57 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="3lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Создайте калькулятор</h1>
+			Напишите конструктор Calculator, который создаёт расширяемые объекты-калькуляторы.
+			<br>Эта задача состоит из двух частей, которые можно решать одна за другой.
+			<br>Первый шаг задачи: вызов calculate(str) принимает строку, например «1 + 2», с жёстко заданным форматом «ЧИСЛО операция ЧИСЛО» (по одному пробелу вокруг операции), и возвращает результат. Понимает плюс + и минус -.
+			<br>Пример использования:
+			<listing>
+var calc = new Calculator;
+
+alert( calc.calculate("3 + 7") ); // 10
+			</listing>
+			Второй шаг – добавить калькулятору метод addMethod(name, func), который учит калькулятор новой операции. Он получает имя операции name и функцию от двух аргументов func(a,b), которая должна её реализовывать.
+			<br>Например, добавим операции умножить *, поделить / и возвести в степень **:
+			<listing>
+var powerCalc = new Calculator;
+powerCalc.addMethod("*", function(a, b) {
+	return a * b;
+});
+powerCalc.addMethod("/", function(a, b) {
+	return a / b;
+});
+powerCalc.addMethod("**", function(a, b) {
+	return Math.pow(a, b);
+});
+
+var result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
+			</listing>
+			Поддержка скобок и сложных математических выражений в этой задаче не требуется.
+			<br>Числа и операции могут состоять из нескольких символов. Между ними ровно один пробел.
+			<br>Предусмотрите обработку ошибок. Какая она должна быть – решите сами.
+		<h1>Листинг</h1>
+			<listing>
+function calc2() {
+	var str1 = document.getElementById("numms").value;
+	var arr = str1.split(' ');
+	if (arr[1]=='+') {
+		alert(parseInt(arr[0])+parseInt(arr[2]));
+	} else if (arr[1]=='-') {
+		alert(parseInt(arr[0])-parseInt(arr[2]));
+	} else if (arr[1]=='*') {
+		alert(parseInt(arr[0])*parseInt(arr[2]));
+	} else if(arr[1]=='/') {
+		alert(parseInt(arr[0])/parseInt(arr[2]));
+	} 
+}
+			</listing>
+		<h1>Результат</h1>
+			<input type="text" id="numms" placeholder="a + b \ a - b \ a / b \ a * b">
+			<input type="button" value="ОК" onclick="calc2()">
+	</div>
+</body>

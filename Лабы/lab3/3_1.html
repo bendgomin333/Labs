@@ -20,22 +20,22 @@ alert( calculator.mul() );
 			</listing>
 		<h1>Листинг</h1>
 			<listing>
-function Fib()
-{
-	var n = parseInt(document.getElementById("value_n5").value);
-	var prev = 1;
-	var next = 1;
-	var res = prev + next;
-	for (var i=3;i<=n;i++){
-		res = prev + next;
-		prev = next;
-		next = res;
+var calculator = {
+	read: function() {
+		this.a = parseInt(prompt('a', 0));
+		this.b = parseInt(prompt('b', 0));
+	},
+	sum: function() {
+		alert(this.a + this.b);
+	},
+	mul: function() {
+		alert(this.a * this.b);
 	}
-	alert(res);
 }
 			</listing>
 		<h1>Результат</h1>
-			Числа Фибоначчи fib(n):<input type="text" id="value_n5" style="width: 50px;">
-			<input type="button" value="Высчитать" onclick="Fib()">
+			<input type="button" value="calculator.read()" onclick="calculator.read()">
+			<input type="button" value="calculator.sum()" onclick="calculator.sum()">
+			<input type="button" value="calculator.mul()+" onclick="calculator.mul()">
 	</div>
 </body>

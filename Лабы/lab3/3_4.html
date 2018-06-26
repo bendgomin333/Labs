@@ -1,0 +1,41 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="3lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Создать Calculator при помощи конструктора</h1>
+			Напишите функцию-конструктор Calculator, которая создает объект с тремя методами:
+			<br>Метод read() запрашивает два значения при помощи prompt и запоминает их в свойствах объекта.
+			<br>Метод sum() возвращает сумму запомненных свойств.
+			<br>Метод mul() возвращает произведение запомненных свойств.
+			<br>Пример использования:
+			<listing>
+var calculator = new Calculator();
+calculator.read();
+
+alert( "Сумма=" + calculator.sum() );
+alert( "Произведение=" + calculator.mul() );
+			</listing>
+		<h1>Листинг</h1>
+			<listing>
+function calculator1() {
+	this.read = function() {
+		this.a = +prompt('a', 0);
+		this.b = +prompt('b', 0);
+	};
+	this.sum = function() {
+		alert(this.a + this.b);
+	};
+	this.mul = function() {
+		alert(this.a * this.b);
+	};
+}
+var calc = new calculator1();
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="read()" onclick="calc.read();">
+			<input type="button" value="sum()" onclick="calc.sum();">
+			<input type="button" value="mul()" onclick="calc.mul();">
+	</div>
+</body>

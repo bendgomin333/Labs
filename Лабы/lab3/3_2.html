@@ -1,0 +1,58 @@
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="3lab.js"></script>
+</head>
+<body>
+	<div style="margin-left: 5%; width: 600px;">
+		<h1>Цепочка вызовов</h1>
+			Есть объект «лестница» ladder:
+			<listing>
+var ladder = {
+	step: 0,
+	up: function() { // вверх по лестнице
+		this.step++;
+	},
+	down: function() { // вниз по лестнице
+		this.step--;
+	},
+	showStep: function() { // вывести текущую ступеньку
+		alert( this.step );
+	}
+};
+			</listing>
+			Сейчас, если нужно последовательно вызвать несколько методов объекта, это можно сделать так:
+			<listing>
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep(); // 1			
+			</listing>
+			Модифицируйте код методов объекта, чтобы вызовы можно было делать цепочкой, вот так:
+			<listing>
+ladder.up().up().down().up().down().showStep(); // 1
+			</listing>
+			Как видно, такая запись содержит «меньше букв» и может быть более наглядной.
+			<p>Такой подход называется «чейнинг» (chaining) и используется, например, во фреймворке jQuery.
+		<h1>Листинг</h1>
+			<listing>
+var ladder = {
+	step: 0,
+	up: function() {
+		this.step++;
+		return this;
+	},
+	down: function() {
+		this.step--;
+		return this;
+	},
+	showStep: function() {
+		alert( this.step );
+	}
+};
+			</listing>
+		<h1>Результат</h1>
+			<input type="button" value="ladder.up().up().up()" onclick="ladder.up().up().up()">
+			<input type="button" value="ladder.down().down()" onclick="ladder.down().down()">
+			<input type="button" value="ladder.showStep()" onclick="ladder.showStep()">
+	</div>
+</body>
